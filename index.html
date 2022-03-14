@@ -10,6 +10,13 @@
         margin-bottom: 15px;
         min-width: 300px;
     }
+    .btn-outline-primary{
+        margin: 0 15px;
+        padding: 5px;
+        font-size: 18px;
+        margin-bottom: 15px;
+        width: 30px;
+    }
     </style>
     <style type="text/css">
     body {
@@ -26,94 +33,96 @@
     <div class="text-center my-3">
         First, enter 4 random keywords
         <div class="container">
-        <form>
             <div class="form-group-row">
               <div class="col-xs-2">
-                <input type="text" class="form-control" placeholder="Keyword 1">
+                <input type="text" id="k1" class="form-control" placeholder="Keyword 1">
               </div>
               <div class="col-xs-2">
-                <input type="text" class="form-control" placeholder="Keyword 2">
+                <input type="text" id="k2" class="form-control" placeholder="Keyword 2">
               </div>
             </div>
             <div class="form-group-row">
                 <div class="col-xs-2">
-                  <input type="text" class="form-control" placeholder="Keyword 3">
+                  <input type="text" id="k3" class="form-control" placeholder="Keyword 3">
                 </div>
                 <div class="col-xs-2">
-                  <input type="text" class="form-control" placeholder="Keyword 4">
+                  <input type="text" id="k4" class="form-control" placeholder="Keyword 4">
                 </div>
               </div>
-          </form>
-        </div>
-            <br>
-            Now, select 5 numbers / symbols
-            <br>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">1</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">2</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">3</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">4</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">5</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">6</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">7</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">8</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">9</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">0</button>
-                </div>
+          
             </div>
             <br>
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">!</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">@</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">#</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">$</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">%</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">^</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">&</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">*</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">-</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">?</button>
-                </div>
-            </div>
+            Now, select 3 numbers / symbols
+            <br>
+        
+        <div class="btn-group block" role="group" aria-label="toggle mulitple buttons">
+            <input type="checkbox" class="btn-check" id="1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="1">1</label>
+
+            <input type="checkbox" class="btn-check" id="2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="2">2</label>
+
+            <input type="checkbox" class="btn-check" id="3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="3">3</label>
+            
+            <input type="checkbox" class="btn-check" id="4" autocomplete="off">
+            <label class="btn btn-outline-primary" for="4">4</label>
+
+            <input type="checkbox" class="btn-check" id="5" autocomplete="off">
+            <label class="btn btn-outline-primary" for="5">5</label>
+
+            <input type="checkbox" class="btn-check" id="6" autocomplete="off">
+            <label class="btn btn-outline-primary" for="6">6</label>
+            
+            <input type="checkbox" class="btn-check" id="7" autocomplete="off">
+            <label class="btn btn-outline-primary" for="7">7</label>
+
+            <input type="checkbox" class="btn-check" id="8" autocomplete="off">
+            <label class="btn btn-outline-primary" for="8">8</label>
+
+            <input type="checkbox" class="btn-check" id="9" autocomplete="off">
+            <label class="btn btn-outline-primary" for="9">9</label>
+        
+            <input type="checkbox" class="btn-check" id="0" autocomplete="off">
+            <label class="btn btn-outline-primary" for="0">0</label>
         </div>
+        <br>
+        <div class="btn-group block" role="group" aria-label="toggle mulitple buttons">
+            <input type="checkbox" class="btn-check" id="!" autocomplete="off">
+            <label class="btn btn-outline-primary" for="!">!</label>
+
+            <input type="checkbox" class="btn-check" id="@" autocomplete="off">
+            <label class="btn btn-outline-primary" for="@">@</label>
+
+            <input type="checkbox" class="btn-check" id="#" autocomplete="off">
+            <label class="btn btn-outline-primary" for="#">#</label>
+            
+            <input type="checkbox" class="btn-check" id="$" autocomplete="off">
+            <label class="btn btn-outline-primary" for="$">$</label>
+
+            <input type="checkbox" class="btn-check" id="%" autocomplete="off">
+            <label class="btn btn-outline-primary" for="%">%</label>
+
+            <input type="checkbox" class="btn-check" id="^" autocomplete="off">
+            <label class="btn btn-outline-primary" for="^">^</label>
+            
+            <input type="checkbox" class="btn-check" id="&" autocomplete="off">
+            <label class="btn btn-outline-primary" for="&">&</label>
+
+            <input type="checkbox" class="btn-check" id="*" autocomplete="off">
+            <label class="btn btn-outline-primary" for="*">*</label>
+
+            <input type="checkbox" class="btn-check" id="-" autocomplete="off">
+            <label class="btn btn-outline-primary" for="-">-</label>
+        
+            <input type="checkbox" class="btn-check" id="?" autocomplete="off">
+            <label class="btn btn-outline-primary" for="?">?</label>
+        </div>
+        <br>
+        <button id="submit" type="button"> Submit </button>
+
+        <p id="temp"></p>
+        <p id="list"></p>
     </div>
+    <script src="script.js"></script>
 </body>
