@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "MyPassword",
+    "version": "0.1",
+
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["content.js"]
+        }
+      ],
+      "action":{
+        "default_popup": "index.html",
+        "default_title": "MyPassword"
+    },
+    "icons": {"48": "icon48.png",
+            "128": "icon128.png" }
+      
+}
