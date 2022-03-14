@@ -7,7 +7,7 @@
 //     })
 // })
 
-var keys = []
+var final_list = []
 
 function addWords(event) {
     keys = []
@@ -35,10 +35,21 @@ function addWords(event) {
         list.appendChild(txt)
     }
 }
+function addKeys(event){
+    symbols = []
+    var markedCheckbox = document.getElementsByClassName('btn-check');  
+    for (var checkbox of markedCheckbox) {  
+      if (checkbox.checked)  
+        symbols.push(checkbox.id)
+        //document.body.append(checkbox.id + ' ');  
+    }  
+  
 
+}
 let submitButton = document.getElementById('submit')
 if(submitButton){
     submitButton.addEventListener('click', addWords)
+    submitButton.addEventListener('click', addKeys)
 }
 
 
