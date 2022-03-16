@@ -95,7 +95,40 @@ if(submitButton){
     
 }
 
+let copyBtn = document.getElementById('copy');
+if(copyBtn){
+  copyBtn.addEventListener('click', handleCopy);
+  passAsString = ''
+}
 
+function handleCopy(){
+  console.log("copy clicked!");
+  let list = document.getElementById('list');
+  passAsString = list.childNodes[1].wholeText;
+  console.log(passAsString);
+  
+  copyStringToClipboard(passAsString);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + passAsString);
+}
+
+function copyStringToClipboard (str) {
+   // Create new element
+   var el = document.createElement('textarea');
+   // Set value (string to be copied)
+   el.value = str;
+   // Set non-editable to avoid focus and move outside of view
+   el.setAttribute('readonly', '');
+   el.style = {position: 'absolute', left: '-9999px'};
+   document.body.appendChild(el);
+   // Select text inside element
+   el.select();
+   // Copy text to clipboard
+   document.execCommand('copy');
+   // Remove temporary element
+   document.body.removeChild(el);
+}
 
 
 
