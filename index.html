@@ -17,23 +17,58 @@
         margin-bottom: 15px;
         width: 30px;
     }
+    .header{
+      background: #1c4587;
+      color: white;
+      padding: 4px;
+
+    }
+    .logo{
+      width: 25%;
+      height: 12%;
+    }
+    .col-xs-2{
+      margin: 5px 10px 5px 10px
+    }
+    #submit{
+      background: #1c4587;
+      color: white;
+    }
+    #temp{
+      margin-top: 10px;
+    }
+    #list{
+      border-radius: 5px 0px 0px 5px;
+      border-color: grey;
+    }
+    #copyimg{
+      height: 25px;
+      width: 25px;
+    }
+    #password{
+      visibility: hidden;
+    }
+
     </style>
     <style type="text/css">
     body {
-      min-width: 600px; /* your desired width */
+      min-width: 500; /* your desired width */
       max-width: 100%;
       position: relative;
       vertical-align:middle;
+      font-family: 'Trebuchet MS', sans-serif;
     }
     </style>
 </head>
 
 <body>
-    <h2 class="text-center mt-3">MyPassword</h2>
+    <div class="header">
+    <h1 class="text-center mt-3"><b>MyPassword</b> <img class="logo" src="logo.png"> </h1>
+    </div>
     <div class="text-center my-3">
-        First, enter 4 random keywords
+        First, enter 4 keywords:
         <div class="container">
-            <div class="form-group-row">
+            <div class="input-group justify-content-center">
               <div class="col-xs-2">
                 <input type="text" id="k1" class="form-control" placeholder="Keyword 1">
               </div>
@@ -41,7 +76,7 @@
                 <input type="text" id="k2" class="form-control" placeholder="Keyword 2">
               </div>
             </div>
-            <div class="form-group-row">
+            <div class="input-group justify-content-center">
                 <div class="col-xs-2">
                   <input type="text" id="k3" class="form-control" placeholder="Keyword 3">
                 </div>
@@ -52,7 +87,7 @@
           
             </div>
             <br>
-            Now, select 3 numbers / symbols
+            Now, select 3 numbers / symbols:
             <br>
         
         <div class="btn-group block" role="group" aria-label="toggle mulitple buttons">
@@ -119,10 +154,13 @@
             <label class="btn btn-outline-primary" for="?">?</label>
         </div>
         <br>
-        <button id="submit" type="button"> Submit </button>
+        <button id="submit" class="btn" type="button"> Submit </button>
 
         <p id="temp"></p>
-        <p id="list"></p>
+        <div class="btn-group" id="password">
+          <div class="input-group-text" id="list"></div> 
+          <button class="btn btn-outline-secondary" id="copy"><img src="copy.png" id="copyimg"></button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,12 +1,3 @@
-// let btns = document.querySelectorAll('button');
-// btns.forEach(function (i) {
-//     console.log("new button!")
-//     i.addEventListener('click', function() {
-//         val = i.innerHTML
-//         console.log(val)
-//     })
-// })
-
 var final_list = []
 
 function shuffle(array) {
@@ -51,13 +42,6 @@ function addWords(event) {
     let title = document.getElementById('temp');
     txt = document.createTextNode("Your password:")
     title.append(txt)
-    // change list text
-    // let list = document.getElementById('list');
-    // for(const elt of keys){
-    //     str = `${elt} `
-    //     txt = document.createTextNode(str);
-    //     list.appendChild(txt)
-    // }
 }
 function addKeys(event){
     symbols = []
@@ -76,11 +60,13 @@ function makePass(event){
     const shuffled = shuffle(final_list);
     let list = document.getElementById('list');
     for(const elt of final_list){
-        str = `${elt} `
+        str = `${elt}`
         txt = document.createTextNode(str);
         list.appendChild(txt)
     }
     console.log("FinalList:",final_list);
+    let container = document.getElementById('password');
+    container.style.visibility = "visible";
 }
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
@@ -100,11 +86,13 @@ function shuffle(array) {
   return array;
 }
 
+
 let submitButton = document.getElementById('submit')
 if(submitButton){
     submitButton.addEventListener('click', addWords)
     submitButton.addEventListener('click', addKeys)
     submitButton.addEventListener('click', makePass)
+    
 }
 
 
